@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="=card-row">
+    <div class="card-header">
+     <h1>{{title}}</h1> 
+    </div>
+    <div class="card-body">
+      <h2 *ngif="taskList.length">My Current tasks {{taskList.length}}</h2>
+      <h2 *ngif="!taskList.length">No Task Created..</h2>
+      <app-task-form [taskList]="taskList"></app-task-form>
+      <app-task-list [tasks]="taskList"> 
+         
+      </app-task-list>     
+    </div>
+  </div>
+</div>
